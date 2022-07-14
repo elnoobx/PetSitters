@@ -1,0 +1,73 @@
+###MySQL
+GET http://localhost:9000/api/petSitter HTTP/1.1
+
+###
+POST http://localhost:9000/api/petSitter HTTP/1.1
+Content-Type: application/json
+
+{
+    "CityId": "1",
+    "Name":"Perrs",
+    "Lastname": "Prrs",
+    "cellphone": "7777777",
+    "email": "email@email.com",
+    "photoURL": "2.jpg"
+}
+
+###
+PUT http://localhost:9000/api/petSitter HTTP/1.1
+Content-Type: application/json
+
+{
+    "CityId": "1",
+    "Name":"Perrs",
+    "Lastname": "Prrs",
+    "cellphone": "7777777",
+    "email": "email@email.com",
+    "photoURL": "2.jpg"
+}
+
+### 
+POST http://localhost:9000/api/PetType HTTP/1.1
+Content-Type: application/json
+
+{
+    "petsitterId": "2",
+    "petstype":"3"
+}
+
+###
+GET http://localhost:9000/api/PetType/2 HTTP/1.1
+
+###
+DELETE http://localhost:9000/api/PetType/1 HTTP/1.1
+Content-Type: application/json
+
+
+###MongoDB
+POST http://localhost:9000/api/reviews HTTP/1.1
+Content-Type: application/json
+
+{
+    "PettsitterId": "3",
+    "rating": "9.2",
+    "comments": "Test3"
+}
+
+###
+GET http://localhost:9000/api/reviews HTTP/1.1
+
+###
+GET http://localhost:9000/api/reviews/3 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/reviews/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "rating": "3.0",
+    "comments": "TEST"
+}
+
+###
+DELETE http://localhost:9000/api/reviews/62cf4737d7f415b7274cb393 HTTP/1.1
