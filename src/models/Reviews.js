@@ -1,19 +1,21 @@
 const mongoose = require('mongoose');
 
 const reviewsSchema = mongoose.Schema({
-    PettsitterId:{
-        type: Number,
-        require:true,
+    pettsitterId: {
+        ref: "Petsitter",
+        type: mongoose.Types.ObjectId,
+        require: true,
         unique: true
     },
-    rating:{
-        type:Number,
-        require:true,
+    rating: {
+        type: Number,
+        require: true,
     },
-    comments:{
-        type:String,
-        require:true,
+    comments: {
+        type: String,
+        require: true,
     }
 });
 
-module.exports = mongoose.model('Reviews',reviewsSchema);
+const Review = mongoose.model('Review', reviewsSchema);
+module.exports = Review
